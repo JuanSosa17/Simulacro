@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navgraph"
+    app:startDestination="@id/listFragment">
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.example.simulacro.fragments.listFragment"
+        android:label="list_fragment"
+        tools:layout="@layout/list_fragment">
+        <action
+            android:id="@+id/action_listFragment_to_viewItem"
+            app:destination="@id/ViewItem" />
+    </fragment>
+    <fragment
+        android:id="@+id/ViewItem"
+        android:name="com.example.simulacro.fragments.ViewItem"
+        android:label="ViewItem"
+        tools:layout="@layout/view_item">
+        <argument
+            android:name="mascota"
+            app:argType="com.example.simulacro.entities.Mascota" />
+    </fragment>
+</navigation>
